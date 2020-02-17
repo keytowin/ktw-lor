@@ -94,7 +94,7 @@ rectanglesFromEndpoint()
   return json.parse(httpGet(api_gameclient))
 }
 
-; modified documentatoin example into a function - https://www.autohotkey.com/docs/commands/URLDownloadToFile.htm#WHR
+; modified documentation example into a function - https://www.autohotkey.com/docs/commands/URLDownloadToFile.htm#WHR
 httpGet(request)
 {
   local whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
