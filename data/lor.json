@@ -1,0 +1,93 @@
+{
+  "startingScreen": "home",
+  "screens": {
+    "home": {
+      "screenTitle": "Home",
+      "sections": [
+        "sectPrimaryNav",
+        "home"
+      ],
+      "positions": [
+        {
+          "xPos": -0.71,
+          "yPos": 0.82,
+          "actionType": "changeScreen",
+          "actionParameter": "playerIcon",
+          "label": "Set your player icon",
+          "neighbors": {
+            "down": "2",
+            "right": "3"
+          }
+        },
+        {
+          "xPos": 0.3,
+          "yPos": -0.83,
+          "actionType": "changeScreen",
+          "actionParameter": "quests",
+          "label": "Quests",
+          "neighbors": {
+            "right": "3",
+            "up": "1"
+          }
+        },
+        {
+          "xPos": 0.7,
+          "yPos": -0.83,
+          "actionType": "changeScreen",
+          "actionParameter": "weeklyVault",
+          "label": "Weekly Vault",
+          "neighbors": {
+            "left": "2",
+            "up": "1"
+          }
+        }
+      ]
+    },
+    "sectPrimaryNav": {
+      "positions": [
+        {
+          "xPos": -0.91,
+          "yPos": 0.6,
+          "actionType": "changeScreen",
+          "actionParameter": "Home",
+          "label": "Play",
+          "neighbors": {
+            "down": "2"
+          }
+        },
+        {
+          "xPos": -0.91,
+          "yPos": 0.32,
+          "actionType": "changeScreen",
+          "actionParameter": "play",
+          "label": "Play",
+          "neighbors": {
+            "up": "1",
+            "down": "3"
+          }
+        },
+        {
+          "xPos": -0.91,
+          "yPos": 0.04,
+          "actionType": "changeScreen",
+          "actionParameter": "collection",
+          "label": "Collection",
+          "neighbors": {
+            "down": "4",
+            "up": "2"
+          }
+        },
+        {
+          "xPos": -0.91,
+          "yPos": -0.24,
+          "actionType": "changeScreen",
+          "actionParameter": "rewards",
+          "label": "Rewards",
+          "neighbors": {
+            "up": "3"
+          }
+        }
+      ]
+    }
+  }
+}
