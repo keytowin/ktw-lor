@@ -128,7 +128,6 @@ buildAllScreens(screensArray)
       builtScreens[screenID] := []
       for index, paID in obj.sections
       {
-        MsgBox %index% and %paID%
         builtScreens[screenID][index] := screensArray[paID].positions
       }
     }
