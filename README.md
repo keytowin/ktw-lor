@@ -1,6 +1,6 @@
-# ktw-lor
+# KeyToWin-LoR
 KeyToWin-Legends of Runeterra
-Attempting to make Legends of Runeterra playable without a mouse
+Attempting to make Legends of Runeterra (LoR) playable without a mouse
 
 ---
 
@@ -8,6 +8,7 @@ Attempting to make Legends of Runeterra playable without a mouse
 
 ### Prerequisites
 * MS Windows
+  * Tested on Windows 10 with LoR in fullscreen mode
 * [Install AutoHotKey v1.1](https://www.autohotkey.com/download/ahk-install.exe)
   * Note: [Link above throws Google Safe Browsing false positive](https://www.autohotkey.com/download/safe.htm)
 * Clone this repository
@@ -22,11 +23,11 @@ Please [create an issue](https://github.com/keytowin/ktw-lor/issues/new) for any
 
 ---
 
-### What the script currently does
+### What KeyToWin-LoR currently does
 * Launches LoR (if it's already installed)
-* Creates an overlay for the Home screen
+* Creates positions and sections for navigating the Home screen
   * Does not currently check for the Quests dialog that appears daily when a new quest is added to the list
-* Moves the mouse to the "Home" button
+* Moves the mouse to the "Home" button as the starting position
 * Also see General Commands below
 
 ---
@@ -34,12 +35,11 @@ Please [create an issue](https://github.com/keytowin/ktw-lor/issues/new) for any
 ## Controls
 
 ### General Commands
-* arrow keys: Move position
+* F5: Expand/Collapse a keyboard commands window
+* Arrow keys: Move position
   * will beep if you can't arrow in a particular direction
 * Tab: Next section
   * will beep if there is only one section
 * Shift+Tab: Previous section
   * will beep if there is only one section
-* Space or Enter: Click
-* Shift+Space: Right-click
 * q: Exit
