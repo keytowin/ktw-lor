@@ -26,6 +26,8 @@ global zeroY := 0 ; vertical center of the play area in pixels
 global maxX := 0 ; max horizontal distance from center in pixels
 global maxY := 0 ; max vertical distance from center in pixels
 
+global commandsDisplayVisible := false
+
 ; ----
 ; ----
 ; main
@@ -77,6 +79,18 @@ global currentPosition := currentScreen[currentSectionIndex][currentPositionInde
 WinActivate, %gameWinTitle%
 MoveMouse()
 #include ktw-keybindings.ahk
+
+; show keyboard command to display keyboard commands
+commandDisplayWindowName := "keyboard commands | ktw-lor"
+keyCommandString := toggleCommandsDisplay . " - Show Keyboard Commands  "
+Gui, Add, Text, x5 y5 vKeyCommands, %keyCommandString%
+Gui, +AlwaysOnTop
+Gui, Show,h10,%commandDisplayWindowName%
+WinSet, Style, ^0x00C40000, %commandDisplayWindowName%
+WinGetPos,,,cmdWidth,cmdHeight,%commandDisplayWindowName%
+guiX := width - cmdWidth
+WinMove, %commandDisplayWindowName%,,guiX,0
+WinActivate, %gameWinTitle%
 Exit
 
 ; --------

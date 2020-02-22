@@ -104,3 +104,24 @@ scrollDown:
 quitApp:
   ExitApp
   return
+
+toggleCommandsDisplay:
+  commandsDisplayVisible := !commandsDisplayVisible
+  Gui, Destroy
+  commandDisplayWindowName := "keyboard commands | ktw-lor"
+  if (commandsDisplayVisible)
+  {
+    keyCommandString := toggleCommandsDisplay . " - Hide Keyboard Commands  `n" . close . " - Close ktw-lor `n`n" . nextSection . " - Next section`n" . previousSection . " - Prev section`n" . goUp . " - Move up `n" . goDown . " - Move down `n" . goLeft . " - Move left `n" . goRight . " - Move right `n" . scrollUp . " - Scroll up `n" . scrollDown . " - Scroll down `n"
+    guiHeight := 140
+  }
+  else
+  {
+    keyCommandString := toggleCommandsDisplay . " - Show Keyboard Commands  "
+    guiHeight := 10
+  }
+  Gui, Add, Text, x5 y5 vKeyCommands, %keyCommandString%
+  Gui, +AlwaysOnTop
+  Gui, Show,x%guiX% y0 h%guiHeight%,%commandDisplayWindowName%
+  WinSet, Style, ^0x00C40000, %commandDisplayWindowName%
+  WinActivate, %gameWinTitle%
+  return
