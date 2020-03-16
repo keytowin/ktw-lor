@@ -88,6 +88,45 @@
           }
         }
       ]
+    },
+    "gameplayStatics": {
+      "positions": [
+        {
+          "xPos": -0.95,
+          "yPos": 0,
+          "actionType": "autoClick",
+          "actionParameter": "target",
+          "label": "History",
+          "neighbors": {
+            "right": "4",
+            "up": "1",
+            "down": "2"
+          }
+        },
+        {
+          "xPos": -0.68,
+          "yPos": 0,
+          "actionType": "noClick",
+          "actionParameter": "target",
+          "label": "Oracle's Eye",
+          "neighbors": {
+            "right": "5",
+            "left": "3",
+            "up": "1",
+            "down": "2"
+          }
+        },
+        {
+          "xPos": 0.77,
+          "yPos": 0,
+          "actionType": "submit",
+          "actionParameter": "target",
+          "label": "Okay",
+          "neighbors": {
+            "left": "3"
+          }
+        }
+      ]
     }
   }
 }
