@@ -273,3 +273,198 @@ httpGet(request)
   local version := whr.ResponseText
   return version
 }
+
+; manually building gameplay screen
+F8::
+allScreens["gameplay"] := makeGameplayScreen()
+
+/*
+currentScreenID := "gameplay"
+currentScreen := allScreens[currentScreenID]
+
+currentSectionIndex := 1
+currentPositionIndex := 1 ; currently starting on enemy nexus, will need to figure out where it should actually start later
+currentPosition := currentScreen[currentSectionIndex][currentPositionIndex]
+MoveMouse()
+*/
+return
+
+makeGameplayScreen()
+{
+  global
+  ; getting rectangles
+  local endpointData := rectanglesFromEndpoint()
+
+  ; will only work during gameplay
+  if endpointData.GameState != "InProgress"
+    return
+ 
+  local gameplayScreen := []
+  gameplayScreen[1] := []
+ 
+  local overlay := []
+  local playerHand := []
+  local playerBench := []
+  local playerBattlefield := []
+  local enemyHand := []
+  local enemyBench := []
+  local enemyBattlefield := []
+  local spellStack := []
+  
+  local gameplayHeight := endpointData.Screen.ScreenHeight 
+  local gameplayRects := endpointData.Rectangles
+
+  for rectIndex,card in gameplayRects
+  {
+    ; calculating card features to help determine card positions
+    locationRatio := card.TopLeftY / gameplayHeight
+    heightRatio := card.Height / gameplayHeight
+
+    switch
+    {
+    Case card.CardID < 0, heightRatio > .3:
+      ; create dialog
+      overlay.push(card)
+    Case card.CardCode == "face" && card.LocalPlayer == false:
+      card.down := 2
+      card.left := 3
+      card.right := 4
+      gameplayScreen[1][1] := new position(card)
+    Case card.CardCode == "face" && card.LocalPlayer == true:
+      card.up := 1
+      card.left := 3
+      card.right := 4
+      gameplayScreen[1][2] := new position(card)
+    Case locationRatio < 0.09:
+      card.yPos := -1
+      playerHand.push(card)
+    Case heightRatio > .14 && heightRatio < .15 && locationRatio > 0.23 && locationRatio < 0.25:
+      card.yPos := -0.66
+      playerBench.push(card)
+    Case locationRatio > 0.4 && locationRatio < 0.425:
+      card.yPos := -0.31
+      playerBattlefield.push(card)
+    Case locationRatio > 0.45 && locationRatio < 0.6:
+      card.yPos := 0.0
+      spellStack.push(card)
+    Case locationRatio > 0.72 && locationRatio < 0.74:
+      card.yPos := 0.31
+      enemyBattlefield.push(card)
+    Case heightRatio > .14 && heightRatio < .15 && locationRatio > 0.89 && locationRatio < 0.91:
+      card.yPos := 0.66
+      enemyBench.push(card)
+    Case locationRatio > 1:
+      card.yPos := 1
+      enemyHand.push(card)
+    Default:
+      cc := card.CardCode
+      MsgBox Card: %cc% has locationRatio: %locationRatio% and heightRatio: %heightRatio%
+    }
+  }
+
+  ; importedPositions has data imported from lor.json
+  gpStatics := importedPositions.screens.gameplayStatics.positions
+
+  gameplayScreen[1][3] := gpStatics[1] ; History
+  gameplayScreen[1][4] := gpStatics[2] ; Oracle's Eye
+  gameplayScreen[1][5] := gpStatics[3] ; Okay
+
+  ; putting position array for areas that actually exist into one array
+  allGPRows := []
+  if enemyHand.count() > 0
+    allGPRows.push(enemyHand)
+  if enemyBench.count() > 0
+    allGPRows.push(enemyBench)
+  if enemyBattlefield.count() > 0
+    allGPRows.push(enemyBattlefield)
+  if spellStack.count() > 0
+    allGPRows.push(spellStack)
+  if playerBattlefield.count() > 0
+    allGPRows.push(playerBattlefield)
+  if playerBench.count() > 0
+    allGPRows.push(playerBench)
+  if playerHand.count() > 0
+    allGPRows.push(playerHand)
+
+  ; performing batch actions for each position array and then adding each array's positions into a single gameplayScreen
+  Loop % allGPRows.count()
+  {
+    gpRow := allGPRows[A_Index]
+    sortGameplayRow(gpRow)
+    leftRightLink(gpRow)
+    
+    for rowI,rowV in gpRow
+    {
+      gameplayScreen[1].push(new position(rowV))
+    }
+  }
+
+  testString := ""
+  testString := "Count: " . gameplayScreen[1].count() . "`n"
+  for gpKey,gpVal in gameplayScreen[1]
+  {
+    testString .= gpKey . " - " . gpVal.label . " at " gpVal.xPos . "x" . gpVal.yPos . "`n"
+  }
+  MsgBox %testString%
+
+  ; return gameplayScreen
+}
+
+; sorts cards in each gameplay row by their TopLeftXs
+sortGameplayRow(gameplayRow)
+{
+  for currentIndex,currentCard in gameplayRow
+  {
+    previousIndex := currentIndex - 1
+    while previousIndex >= 1 && gameplayRow[previousIndex].TopLeftX > currentCard.TopLeftX
+    {
+      gameplayRow[previousIndex + 1] := gameplayRow[previousIndex]
+      previousIndex := previousIndex - 1
+    }
+    gameplayRow[previousIndex + 1] := currentCard
+  }
+}
+
+class position
+{
+  xPos := 0
+  yPos := 0
+  label := ""
+  id := ""
+  actionType := ""
+  actionParameter := ""
+  neighbors := []
+  
+  __New(posArray)
+  {
+    global height
+
+    this.xPos := coordXToPos(posArray.TopLeftX + (posArray.Width / 2))
+
+    if posArray.yPos
+      this.yPos := posArray.yPos
+    else
+      this.yPos := coordYToPos((height - posArray.TopLeftY) + (posArray.Height / 2)) ; LoR y=0 is bottom; AHK y=0 is top
+
+    if posArray.label
+      this.label := posArray.label
+    else
+      this.label := posArray.CardCode ; TODO: replace with card names from datadragon
+
+    this.id := posArray.CardID ; I believe CardIDs only given to cards during gameplay, but it's currently undocumented
+    
+    if posArray.up
+      this.neighbors["up"] := posArray.up
+    if posArray.down
+      this.neighbors["down"] := posArray.down
+    if posArray.left
+      this.neighbors["left"] := posArray.left
+    if posArray.right
+      this.neighbors["right"] := posArray.right
+      
+      
+    ; TODO: actionType and actionParameter should be added to the individual cards if necessary; they might not be needed
+    ; this.actionType := posArray.actionType
+    ; this.actionType := posArray.actionParameter
+  }
+}
