@@ -21,7 +21,7 @@
         },
         {
           "xPos": 0.3,
-          "yPos": -0.83,
+          "yPos": -0.88,
           "actionType": "changeScreen",
           "actionParameter": "quests",
           "label": "Quests",
@@ -31,14 +31,163 @@
           }
         },
         {
-          "xPos": 0.7,
-          "yPos": -0.83,
+          "xPos": 0.75,
+          "yPos": -0.88,
           "actionType": "changeScreen",
           "actionParameter": "weeklyVault",
           "label": "Weekly Vault",
           "neighbors": {
             "left": "2",
             "up": "1"
+          }
+        }
+      ]
+    },
+    "play": {
+      "screenTitle": "Play",
+      "sections": [
+        "sectPrimaryNav",
+        "play"
+      ],
+      "positions": [
+        {
+          "xPos": -0.69,
+          "yPos": 0.52,
+          "actionType": "changeScreen",
+          "actionParameter": "vsPlayer",
+          "label": "vs Player",
+          "neighbors": {
+            "down": "2",
+            "right": "5"
+          }
+        },
+        {
+          "xPos": -0.69,
+          "yPos": 0.36,
+          "actionType": "changeScreen",
+          "actionParameter": "vsAI",
+          "label": "vs AI",
+          "neighbors": {
+            "down": "3",
+            "right": "5",
+            "up": "1"
+          }
+        },
+        {
+          "xPos": -0.69,
+          "yPos": 0.2,
+          "actionType": "changeScreen",
+          "actionParameter": "expeditions",
+          "label": "Expeditions",
+          "neighbors": {
+            "down": "4",
+            "up": "2",
+            "right": "9"
+          }
+        },
+        {
+          "xPos": -0.69,
+          "yPos": 0.04,
+          "actionType": "changeScreen",
+          "actionParameter": "challenges",
+          "label": "Challenges",
+          "neighbors": {
+            "right": "9",
+            "up": "3"
+          }
+        },
+        {
+          "xPos": -0.33,
+          "yPos": 0.35,
+          "actionType": "changeScreen",
+          "actionParameter": "deckModal",
+          "label": "Deck 1",
+          "neighbors": {
+            "right": "6",
+            "left": "1",
+            "down": "9"
+          }
+        },
+        {
+          "xPos": 0.03,
+          "yPos": 0.35,
+          "actionType": "changeScreen",
+          "actionParameter": "deckModal",
+          "label": "Deck 2",
+          "neighbors": {
+            "right": "7",
+            "left": "5",
+            "down": "10"
+          }
+        },
+        {
+          "xPos": 0.39,
+          "yPos": 0.35,
+          "actionType": "changeScreen",
+          "actionParameter": "deckModal",
+          "label": "Deck 3",
+          "neighbors": {
+            "right": "8",
+            "left": "6",
+            "down": "11"
+          }
+        },
+        {
+          "xPos": 0.75,
+          "yPos": 0.35,
+          "actionType": "changeScreen",
+          "actionParameter": "deckModal",
+          "label": "Deck 4",
+          "neighbors": {
+            "left": "7",
+            "down": "12"
+          }
+        },
+        {
+          "xPos": -0.33,
+          "yPos": -0.48,
+          "actionType": "changeScreen",
+          "actionParameter": "deckModal",
+          "label": "Deck 5",
+          "neighbors": {
+            "left": "4",
+            "up": "5",
+            "right": "10"
+          }
+        },
+        {
+          "xPos": -0.03,
+          "yPos": -0.48,
+          "actionType": "changeScreen",
+          "actionParameter": "deckModal",
+          "label": "Deck 6",
+          "neighbors": {
+            "left": "9",
+            "up": "6",
+            "right": "11"
+          }
+        },
+        {
+          "xPos": 0.39,
+          "yPos": -0.48,
+          "actionType": "changeScreen",
+          "actionParameter": "deckModal",
+          "label": "Deck 7",
+          "neighbors": {
+            "left": "10",
+            "up": "7",
+            "right": "12"
+          }
+        },
+        {
+          "xPos": 0.75,
+          "yPos": -0.48,
+          "actionType": "changeScreen",
+          "actionParameter": "deckModal",
+          "label": "Deck 8",
+          "neighbors": {
+            "left": "11",
+            "up": "8"
           }
         }
       ]
@@ -84,7 +233,18 @@
           "actionParameter": "rewards",
           "label": "Rewards",
           "neighbors": {
-            "up": "3"
+            "up": "3",
+            "down": "5"
+          }
+        },
+        {
+          "xPos": -0.91,
+          "yPos": -0.52,
+          "actionType": "changeScreen",
+          "actionParameter": "store",
+          "label": "Store",
+          "neighbors": {
+            "up": "4"
           }
         }
       ]
