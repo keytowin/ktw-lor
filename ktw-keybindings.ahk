@@ -1,6 +1,7 @@
 ; key commands specified here map to labels in ktw-hotkeys.ahk
 ; ex. key command "Tab" triggers the "goNextSection" label
 
+activate = Enter
 nextSection = Tab
 previousSection = +Tab
 goUp = Up
@@ -13,6 +14,7 @@ close = q
 toggleCommandsDisplay = F5
 
 Hotkey, IfWinActive, %gameWinTitle% ; sets context of hotkeys so they only work while the game window is active
+Hotkey, %activate%, activate
 Hotkey, %nextSection%, goNextSection
 Hotkey, %previousSection%, goPreviousSection
 Hotkey, %goUp%, goUp

@@ -1,5 +1,25 @@
 ; labels referenced by hotkeys in ktw-keybindings.ahk
 
+activate:
+  theType := currentPosition.actionType
+  theParameter := currentPosition.actionParameter
+  targetScreen := allScreens[theParameter]
+  if targetScreen
+  {
+    Send {Click}
+    sleep 50
+    currentScreen := targetScreen
+    currentSectionIndex := 1
+    currentPositionIndex := 1
+    updatePosition()
+  }
+  else
+  {
+    SoundBeep
+  }
+  MoveMouse()
+  return
+
 goNextSection:
   if currentScreen.MaxIndex() > 1
   {
