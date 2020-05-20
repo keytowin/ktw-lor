@@ -201,7 +201,7 @@ return
 
 setupScreen(screenToSetup)
 {
-  ; Suspend, on ; disable user controls while processing setup
+  Suspend, on ; disable user controls while processing setup
   Switch screenToSetup
   {
     case "play":
@@ -223,7 +223,7 @@ setupScreen(screenToSetup)
     default:
       return
   }
-	; Suspend, off ; reenable user controls
+	Suspend, off ; reenable user controls
 }
 
 ; ----------------
