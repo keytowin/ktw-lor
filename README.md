@@ -26,9 +26,9 @@ Please [create an issue](https://github.com/keytowin/ktw-lor/issues/new) for any
 
 ### What KeyToWin-LoR currently does
 * Launches LoR (if it's already installed)
-* Allows navigation between Home screen and generic "Play" screen (works for "vs Player" and "vs AI")
+* Allows navigation between menu screens that have been implemented
   * Does not currently check for new player daily rewards
-* Moves the mouse to the "Home" button as the starting position
+  * No gameplay screens have been implemented
 * Also see General Commands below
 
 ---
@@ -44,7 +44,7 @@ Please [create an issue](https://github.com/keytowin/ktw-lor/issues/new) for any
 * Shift+Tab: Previous section
   * will beep if there is only one section
 * Enter: Activate
-  * will beep if action is not yet implemented
+  * will beep if target screen is not yet implemented
 * PgUp: Scroll up
   * when mouse is in a scrollable area
 * PgDown: Scroll down
