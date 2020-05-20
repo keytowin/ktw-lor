@@ -134,8 +134,8 @@ toggleCommandsDisplay:
   commandDisplayWindowName := "keyboard commands | ktw-lor"
   if (commandsDisplayVisible)
   {
-    keyCommandString := toggleCommandsDisplay . " - Hide Keyboard Commands  `n" . close . " - Close ktw-lor `n`n" . nextSection . " - Next section`n" . previousSection . " - Prev section`n" . goUp . " - Move up `n" . goDown . " - Move down `n" . goLeft . " - Move left `n" . goRight . " - Move right `n" . scrollUp . " - Scroll up `n" . scrollDown . " - Scroll down `n"
-    guiHeight := 140
+    keyCommandString := toggleCommandsDisplay . " - Hide Keyboard Commands  `n" . close . " - Close ktw-lor `n`n" . nextSection . " - Next section`n" . previousSection . " - Prev section`n" . goUp . " - Move up `n" . goDown . " - Move down `n" . goLeft . " - Move left `n" . goRight . " - Move right `n" . activate . " - Click `n" . scrollUp . " - Scroll up `n" . scrollDown . " - Scroll down `n"
+    guiHeight := 150
   }
   else
   {
