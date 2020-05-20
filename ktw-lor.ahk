@@ -219,11 +219,10 @@ setupScreen(screenToSetup)
       ; Reset current section/position
       currentSectionIndex := sectionBackup
       currentPositionIndex := positionBackup
-      return
     default:
-      return
   }
 	Suspend, off ; reenable user controls
+  return
 }
 
 ; ----------------
