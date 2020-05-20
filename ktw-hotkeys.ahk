@@ -9,6 +9,9 @@ activate:
     Send {Click}
     sleep 50
     currentScreen := targetScreen
+    currentScreenID := theParameter
+    setupScreen(currentScreenID)
+    
     currentSectionIndex := 1
     currentPositionIndex := 1
     updatePosition()

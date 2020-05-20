@@ -199,6 +199,33 @@ toolTipString := "actualXxY: " . actualX . "x" . actualY . "`nxPos/yPos: " . Sho
 ToolTip, %toolTipString%, 500, 0
 return
 
+setupScreen(screenToSetup)
+{
+  ; Suspend, on ; disable user controls while processing setup
+  Switch screenToSetup
+  {
+    case "play":
+      sectionBackup := currentSectionIndex
+      positionBackup := currentPositionIndex
+      
+      ; Set to section/position for "vs Player" button
+      currentSectionIndex := 2
+      currentPositionIndex := 1
+      updatePosition()
+      MoveMouse()
+      Send {Click}
+      sleep 50
+      
+      ; Reset current section/position
+      currentSectionIndex := sectionBackup
+      currentPositionIndex := positionBackup
+      return
+    default:
+      return
+  }
+	; Suspend, off ; reenable user controls
+}
+
 ; ----------------
 ; Helper Functions
 ; ----------------
