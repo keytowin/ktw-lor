@@ -298,6 +298,88 @@
         }
       ]
     },
+    "quests": {
+      "screenTitle": "Quests",
+      "sections": [
+        "quests"
+      ],
+      "positions": [
+        {
+          "xPos": 0.49,
+          "yPos": 0.76,
+          "actionType": "goToPrevious",
+          "actionParameter": "",
+          "label": "Close dialog - Quests",
+          "neighbors": {
+            "left": "2",
+            "right": "2"
+          }
+        },
+        {
+          "xPos": -0.43,
+          "yPos": 0.68,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Reroll",
+          "neighbors": {
+            "left": "1",
+            "right": "1",
+            "down": "3"
+          }
+        },
+        {
+          "xPos": -0.43,
+          "yPos": 0.48,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Reroll Quest 1",
+          "neighbors": {
+            "up": "2",
+            "down": "4",
+            "right": "1"
+          }
+        },
+        {
+          "xPos": -0.43,
+          "yPos": 0.28,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Reroll Quest 2",
+          "neighbors": {
+            "up": "3",
+            "down": "5",
+            "right": "1"
+          }
+        },
+        {
+          "xPos": -0.43,
+          "yPos": 0.08,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Reroll Quest 3",
+          "neighbors": {
+            "up": "4",
+            "right": "1"
+          }
+        }
+      ]
+    },
+    "weeklyVault": {
+      "screenTitle": "Vault",
+      "sections": [
+        "weeklyVault"
+      ],
+      "positions": [
+        {
+          "xPos": 0.68,
+          "yPos": 0.86,
+          "actionType": "goToPrevious",
+          "actionParameter": "",
+          "label": "Close dialog - Vault",
+          "neighbors": {}
+        }
+      ]
+    },
     "play": {
       "screenTitle": "Play vs Player",
       "sections": [
