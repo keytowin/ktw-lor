@@ -1,27 +1,54 @@
 ; labels referenced by hotkeys in ktw-keybindings.ahk
 
 activate:
-  theType := currentPosition.actionType
+  theType := currentPosition.actionType  
   theParameter := currentPosition.actionParameter
-  targetScreen := allScreens[theParameter]
-  if targetScreen
+  
+  switch theType
   {
-    Send {Click}
-    sleep 50
-    currentScreen := targetScreen
-    currentScreenID := theParameter
-    setupScreen(currentScreenID)
-    
-    currentSectionIndex := 1
-    currentPositionIndex := 1
-    updatePosition()
+    case "select":
+      Send {Click}
+      sleep 50
+      return
+    case "goToPrevious":
+      currentScreenID := previousScreenID
+      currentSectionIndex := previousSectionIndex
+      currentPositionIndex := previousPositionIndex
+      previousScreenID := ""
+      Send {Click}
+      sleep 50
+      currentScreen := allScreens[currentScreenID]
+      updatePosition()
+      MoveMouse()
+      return
+    case "changeScreen":
+      targetScreen := allScreens[theParameter]
+      if targetScreen
+      {
+        previousScreenID := currentScreenID
+        previousSectionIndex := currentSectionIndex
+        previousPositionIndex := currentPositionIndex
+        Send {Click}
+        sleep 50
+        currentScreen := targetScreen
+        currentScreenID := theParameter
+        setupScreen(currentScreenID)
+        
+        currentSectionIndex := 1
+        currentPositionIndex := 1
+        updatePosition()
+      }
+      else
+      {
+        SoundBeep
+      }
+      MoveMouse()
+      return
+    default:
+      return
   }
-  else
-  {
-    SoundBeep
-  }
-  MoveMouse()
   return
+  
 
 goNextSection:
   if currentScreen.MaxIndex() > 1
