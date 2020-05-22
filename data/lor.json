@@ -43,6 +43,261 @@
         }
       ]
     },
+    "playerIcon": {
+      "screenTitle": "Set your player icon",
+      "sections": [
+        "playerIcon"
+      ],
+      "positions": [
+        {
+          "xPos": 0.63,
+          "yPos": 0.8,
+          "actionType": "goToPrevious",
+          "actionParameter": "",
+          "label": "Close dialog - Set your player icon",
+          "neighbors": {
+            "up": "19",
+            "down": "7",
+            "left": "7",
+            "right": "2"
+          }
+        },
+        {
+          "xPos": -0.52,
+          "yPos": 0.4,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 1",
+          "neighbors": {
+            "up": "14",
+            "down": "8",
+            "left": "1",
+            "right": "3"
+          }
+        },
+        {
+          "xPos": -0.32,
+          "yPos": 0.4,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 2",
+          "neighbors": {
+            "up": "15",
+            "down": "9",
+            "left": "2",
+            "right": "4"
+          }
+        },
+        {
+          "xPos": -0.12,
+          "yPos": 0.4,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 3",
+          "neighbors": {
+            "up": "16",
+            "down": "10",
+            "left": "3",
+            "right": "5"
+          }
+        },
+        {
+          "xPos": 0.08,
+          "yPos": 0.4,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 4",
+          "neighbors": {
+            "up": "17",
+            "down": "11",
+            "left": "4",
+            "right": "6"
+          }
+        },
+        {
+          "xPos": 0.28,
+          "yPos": 0.4,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 5",
+          "neighbors": {
+            "up": "18",
+            "down": "12",
+            "left": "5",
+            "right": "7"
+          }
+        },
+        {
+          "xPos": 0.48,
+          "yPos": 0.4,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 6",
+          "neighbors": {
+            "up": "1",
+            "down": "13",
+            "left": "6",
+            "right": "1"
+          }
+        },
+        {
+          "xPos": -0.52,
+          "yPos": 0.05,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 7",
+          "neighbors": {
+            "up": "2",
+            "down": "14",
+            "left": "13",
+            "right": "9"
+          }
+        },
+        {
+          "xPos": -0.32,
+          "yPos": 0.05,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 8",
+          "neighbors": {
+            "up": "3",
+            "down": "15",
+            "left": "8",
+            "right": "10"
+          }
+        },
+        {
+          "xPos": -0.12,
+          "yPos": 0.05,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 9",
+          "neighbors": {
+            "up": "4",
+            "down": "16",
+            "left": "9",
+            "right": "11"
+          }
+        },
+        {
+          "xPos": 0.08,
+          "yPos": 0.05,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 10",
+          "neighbors": {
+            "up": "5",
+            "down": "17",
+            "left": "10",
+            "right": "12"
+          }
+        },
+        {
+          "xPos": 0.28,
+          "yPos": 0.05,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 11",
+          "neighbors": {
+            "up": "6",
+            "down": "18",
+            "left": "11",
+            "right": "13"
+          }
+        },
+        {
+          "xPos": 0.48,
+          "yPos": 0.05,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 12",
+          "neighbors": {
+            "up": "7",
+            "down": "19",
+            "left": "12",
+            "right": "8"
+          }
+        },
+        {
+          "xPos": -0.52,
+          "yPos": -0.3,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 13",
+          "neighbors": {
+            "up": "8",
+            "down": "2",
+            "left": "19",
+            "right": "15"
+          }
+        },
+        {
+          "xPos": -0.32,
+          "yPos": -0.3,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 14",
+          "neighbors": {
+            "up": "9",
+            "down": "3",
+            "left": "14",
+            "right": "16"
+          }
+        },
+        {
+          "xPos": -0.12,
+          "yPos": -0.3,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 15",
+          "neighbors": {
+            "up": "10",
+            "down": "4",
+            "left": "15",
+            "right": "17"
+          }
+        },
+        {
+          "xPos": 0.08,
+          "yPos": -0.3,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 16",
+          "neighbors": {
+            "up": "11",
+            "down": "5",
+            "left": "16",
+            "right": "18"
+          }
+        },
+        {
+          "xPos": 0.28,
+          "yPos": -0.3,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 17",
+          "neighbors": {
+            "up": "12",
+            "down": "6",
+            "left": "17",
+            "right": "19"
+          }
+        },
+        {
+          "xPos": 0.48,
+          "yPos": -0.3,
+          "actionType": "select",
+          "actionParameter": "",
+          "label": "Icon 18",
+          "neighbors": {
+            "up": "13",
+            "down": "1",
+            "left": "18",
+            "right": "14"
+          }
+        }
+      ]
+    },
     "play": {
       "screenTitle": "Play vs Player",
       "sections": [
@@ -196,7 +451,7 @@
       "screenTitle": "Play vs AI",
       "sections": [
         "sectPrimaryNav",
-        "play"
+        "vsAI"
       ],
       "positions": [
         {
@@ -337,6 +592,160 @@
           "neighbors": {
             "left": "11",
             "up": "8"
+          }
+        }
+      ]
+    },
+    "expeditions": {
+      "screenTitle": "Expeditions",
+      "sections": [
+        "sectPrimaryNav",
+        "expeditions"
+      ],
+      "positions": [
+        {
+          "xPos": -0.69,
+          "yPos": 0.52,
+          "actionType": "changeScreen",
+          "actionParameter": "play",
+          "label": "vs Player",
+          "neighbors": {
+            "down": "2",
+            "right": "5"
+          }
+        },
+        {
+          "xPos": -0.69,
+          "yPos": 0.36,
+          "actionType": "changeScreen",
+          "actionParameter": "vsAI",
+          "label": "vs AI",
+          "neighbors": {
+            "down": "3",
+            "right": "5",
+            "up": "1"
+          }
+        },
+        {
+          "xPos": -0.69,
+          "yPos": 0.2,
+          "actionType": "changeScreen",
+          "actionParameter": "expeditions",
+          "label": "Expeditions",
+          "neighbors": {
+            "down": "4",
+            "up": "2",
+            "right": "5"
+          }
+        },
+        {
+          "xPos": -0.69,
+          "yPos": 0.04,
+          "actionType": "changeScreen",
+          "actionParameter": "challenges",
+          "label": "Challenges",
+          "neighbors": {
+            "right": "5",
+            "up": "3"
+          }
+        },
+        {
+          "xPos": 0.21,
+          "yPos": -0.54,
+          "actionType": "changeScreen",
+          "actionParameter": "embark",
+          "label": "Embark",
+          "neighbors": {
+            "left": "1"
+          }
+        }
+      ]
+    },
+    "challenges": {
+      "screenTitle": "Challenges",
+      "sections": [
+        "sectPrimaryNav",
+        "challenges"
+      ],
+      "positions": [
+        {
+          "xPos": -0.69,
+          "yPos": 0.52,
+          "actionType": "changeScreen",
+          "actionParameter": "play",
+          "label": "vs Player",
+          "neighbors": {
+            "down": "2",
+            "right": "5"
+          }
+        },
+        {
+          "xPos": -0.69,
+          "yPos": 0.36,
+          "actionType": "changeScreen",
+          "actionParameter": "vsAI",
+          "label": "vs AI",
+          "neighbors": {
+            "down": "3",
+            "right": "5",
+            "up": "1"
+          }
+        },
+        {
+          "xPos": -0.69,
+          "yPos": 0.2,
+          "actionType": "changeScreen",
+          "actionParameter": "expeditions",
+          "label": "Expeditions",
+          "neighbors": {
+            "down": "4",
+            "up": "2",
+            "right": "5"
+          }
+        },
+        {
+          "xPos": -0.69,
+          "yPos": 0.04,
+          "actionType": "changeScreen",
+          "actionParameter": "challenges",
+          "label": "Challenges",
+          "neighbors": {
+            "right": "5",
+            "up": "3"
+          }
+        },
+        {
+          "xPos": 0.21,
+          "yPos": 0.35,
+          "actionType": "changeScreen",
+          "actionParameter": "challengeModal",
+          "label": "Challenge 1",
+          "neighbors": {
+            "left": "1",
+            "down": "6"
+          }
+        },
+        {
+          "xPos": 0.21,
+          "yPos": -0.24,
+          "actionType": "changeScreen",
+          "actionParameter": "challengeModal",
+          "label": "Challenge 2",
+          "neighbors": {
+            "left": "1",
+            "down": "7",
+            "up": "5"
+          }
+        },
+        {
+          "xPos": 0.21,
+          "yPos": -0.83,
+          "actionType": "changeScreen",
+          "actionParameter": "challengeModal",
+          "label": "Challenge 3",
+          "neighbors": {
+            "left": "1",
+            "up": "6"
           }
         }
       ]
