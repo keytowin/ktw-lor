@@ -11,7 +11,6 @@ Attempting to make Legends of Runeterra (LoR) playable without a mouse
   * Tested on Windows 10 with LoR in fullscreen mode
 * [Legends of Runeterra](https://playruneterra.com)
 * [Install AutoHotKey v1.1](https://www.autohotkey.com/download/ahk-install.exe)
-  * Note: [Link above throws Google Safe Browsing false positive](https://www.autohotkey.com/download/safe.htm)
 * Clone or download this repository
 
 ---
