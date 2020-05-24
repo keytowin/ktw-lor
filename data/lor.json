@@ -341,7 +341,7 @@
         },
         {
           "xPos": -0.43,
-          "yPos": -0.06,
+          "yPos": -0.08,
           "actionType": "select",
           "actionParameter": "",
           "label": "Reroll Quest 2",
@@ -353,7 +353,7 @@
         },
         {
           "xPos": -0.43,
-          "yPos": -0.46,
+          "yPos": -0.52,
           "actionType": "select",
           "actionParameter": "",
           "label": "Reroll Quest 3",
@@ -1313,7 +1313,7 @@
           "actionParameter": "rewardCheck",
           "label": "Reward",
           "neighbors": {
-            "left": "1",
+            "left": "8",
             "right": "4",
             "up": "2"
           }
@@ -1340,6 +1340,64 @@
             "left": "4",
             "right": "6",
             "up": "2"
+          }
+        },
+        {
+          "xPos": -0.67,
+          "yPos": -0.3,
+          "actionType": "openOverlay",
+          "actionParameter": "",
+          "label": "Notable Champion",
+          "neighbors": {
+            "right": "7",
+            "down": "9"
+          }
+        },
+        {
+          "xPos": -0.56,
+          "yPos": -0.3,
+          "actionType": "openOverlay",
+          "actionParameter": "",
+          "label": "Notable Champion",
+          "neighbors": {
+            "left": "6",
+            "right": "8",
+            "down": "9"
+          }
+        },
+        {
+          "xPos": -0.45,
+          "yPos": -0.3,
+          "actionType": "openOverlay",
+          "actionParameter": "",
+          "label": "Notable Champion",
+          "neighbors": {
+            "left": "7",
+            "right": "3",
+            "down": "10"
+          }
+        },
+        {
+          "xPos": -0.63,
+          "yPos": -0.65,
+          "actionType": "openOverlay",
+          "actionParameter": "",
+          "label": "Notable Champion",
+          "neighbors": {
+            "right": "10",
+            "up": "6"
+          }
+        },
+        {
+          "xPos": -0.49,
+          "yPos": -0.65,
+          "actionType": "openOverlay",
+          "actionParameter": "",
+          "label": "Notable Champion",
+          "neighbors": {
+            "left": "9",
+            "right": "3",
+            "up": "8"
           }
         }
       ]
