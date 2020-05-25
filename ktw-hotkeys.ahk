@@ -45,6 +45,8 @@ activate:
       MoveMouse()
       return
     default:
+      MsgBox Error: Screen type %theType% undefined
+      ExitApp
       return
   }
   return
