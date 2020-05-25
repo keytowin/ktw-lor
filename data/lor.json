@@ -586,7 +586,7 @@
           "xPos": -0.33,
           "yPos": 0.35,
           "actionType": "changeScreen",
-          "actionParameter": "deckModal",
+          "actionParameter": "deckModalAi",
           "label": "Deck 1",
           "neighbors": {
             "right": "6",
@@ -598,7 +598,7 @@
           "xPos": 0.03,
           "yPos": 0.35,
           "actionType": "changeScreen",
-          "actionParameter": "deckModal",
+          "actionParameter": "deckModalAi",
           "label": "Deck 2",
           "neighbors": {
             "right": "7",
@@ -610,7 +610,7 @@
           "xPos": 0.39,
           "yPos": 0.35,
           "actionType": "changeScreen",
-          "actionParameter": "deckModal",
+          "actionParameter": "deckModalAi",
           "label": "Deck 3",
           "neighbors": {
             "right": "8",
@@ -622,7 +622,7 @@
           "xPos": 0.75,
           "yPos": 0.35,
           "actionType": "changeScreen",
-          "actionParameter": "deckModal",
+          "actionParameter": "deckModalAi",
           "label": "Deck 4",
           "neighbors": {
             "left": "7",
@@ -633,7 +633,7 @@
           "xPos": -0.33,
           "yPos": -0.48,
           "actionType": "changeScreen",
-          "actionParameter": "deckModal",
+          "actionParameter": "deckModalAi",
           "label": "Deck 5",
           "neighbors": {
             "left": "4",
@@ -645,7 +645,7 @@
           "xPos": -0.03,
           "yPos": -0.48,
           "actionType": "changeScreen",
-          "actionParameter": "deckModal",
+          "actionParameter": "deckModalAi",
           "label": "Deck 6",
           "neighbors": {
             "left": "9",
@@ -657,7 +657,7 @@
           "xPos": 0.39,
           "yPos": -0.48,
           "actionType": "changeScreen",
-          "actionParameter": "deckModal",
+          "actionParameter": "deckModalAi",
           "label": "Deck 7",
           "neighbors": {
             "left": "10",
@@ -669,7 +669,7 @@
           "xPos": 0.75,
           "yPos": -0.48,
           "actionType": "changeScreen",
-          "actionParameter": "deckModal",
+          "actionParameter": "deckModalAi",
           "label": "Deck 8",
           "neighbors": {
             "left": "11",
@@ -1231,7 +1231,7 @@
         {
           "xPos": 0.15,
           "yPos": 0.91,
-          "actionType": "openOverlay",
+          "actionType": "changeScreen",
           "actionParameter": "regions",
           "label": "Regions",
           "neighbors": {
@@ -1243,7 +1243,7 @@
         {
           "xPos": 0.24,
           "yPos": 0.91,
-          "actionType": "openOverlay",
+          "actionType": "changeScreen",
           "actionParameter": "filters",
           "label": "Filters",
           "neighbors": {
@@ -1287,7 +1287,7 @@
         {
           "xPos": -0.78,
           "yPos": 0.92,
-          "actionType": "openOverlay",
+          "actionType": "changeScreen",
           "actionParameter": "changeRegion",
           "label": "Change Region",
           "neighbors": {
@@ -1345,7 +1345,7 @@
         {
           "xPos": -0.67,
           "yPos": -0.3,
-          "actionType": "openOverlay",
+          "actionType": "changeScreen",
           "actionParameter": "",
           "label": "Notable Champion",
           "neighbors": {
@@ -1356,7 +1356,7 @@
         {
           "xPos": -0.56,
           "yPos": -0.3,
-          "actionType": "openOverlay",
+          "actionType": "changeScreen",
           "actionParameter": "",
           "label": "Notable Champion",
           "neighbors": {
@@ -1368,7 +1368,7 @@
         {
           "xPos": -0.45,
           "yPos": -0.3,
-          "actionType": "openOverlay",
+          "actionType": "changeScreen",
           "actionParameter": "",
           "label": "Notable Champion",
           "neighbors": {
@@ -1380,7 +1380,7 @@
         {
           "xPos": -0.63,
           "yPos": -0.65,
-          "actionType": "openOverlay",
+          "actionType": "changeScreen",
           "actionParameter": "",
           "label": "Notable Champion",
           "neighbors": {
@@ -1391,13 +1391,102 @@
         {
           "xPos": -0.49,
           "yPos": -0.65,
-          "actionType": "openOverlay",
+          "actionType": "changeScreen",
           "actionParameter": "",
           "label": "Notable Champion",
           "neighbors": {
             "left": "9",
             "right": "3",
             "up": "8"
+          }
+        }
+      ]
+    },
+    "deckModalAi": {
+      "screenTitle": "Vs AI",
+      "sections": [
+        "deckModalAi"
+      ],
+      "positions": [
+        {
+          "xPos": -0.68,
+          "yPos": 0.36,
+          "actionType": "changeScreen",
+          "actionParameter": "vsAi",
+          "label": "Close dialog - Vs AI",
+          "neighbors": {
+            "right": "2"
+          }
+        },
+        {
+          "xPos": 0.29,
+          "yPos": 0.49,
+          "actionType": "changeScreen",
+          "actionParameter": "selectYourBoard",
+          "label": "Select Your Board",
+          "neighbors": {
+            "left": "1",
+            "right": "6",
+            "down": "3"
+          }
+        },
+        {
+          "xPos": 0.29,
+          "yPos": 0.17,
+          "actionType": "changeScreen",
+          "actionParameter": "selectYourGuardian",
+          "label": "Select Your Guardian",
+          "neighbors": {
+            "up": "2",
+            "down": "4",
+            "right": "6",
+            "left": "1"
+          }
+        },
+        {
+          "xPos": 0.29,
+          "yPos": -0.15,
+          "actionType": "changeScreen",
+          "actionParameter": "selectYourCardBack",
+          "label": "Select Your Card Back",
+          "neighbors": {
+            "up": "3",
+            "down": "5",
+            "left": "1",
+            "right": "6"
+          }
+        },
+        {
+          "xPos": 0.29,
+          "yPos": -0.48,
+          "actionType": "changeScreen",
+          "actionParameter": "selectYourEmotes",
+          "label": "Select Your Emotes",
+          "neighbors": {
+            "up": "4",
+            "left": "1",
+            "right": "6"
+          }
+        },
+        {
+          "xPos": 0.7,
+          "yPos": -0.8,
+          "actionType": "changeScreen",
+          "actionParameter": "gameplay",
+          "label": "Play Game",
+          "neighbors": {
+            "left": "5",
+            "right": "7"
+          }
+        },
+        {
+          "xPos": 0.91,
+          "yPos": -0.17,
+          "actionType": "changeScreen",
+          "actionParameter": "edit",
+          "label": "Edit",
+          "neighbors": {
+            "left": "6"
           }
         }
       ]
