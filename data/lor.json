@@ -1278,7 +1278,7 @@
       ]
     },
     "rewards": {
-      "screenTitle": "Home",
+      "screenTitle": "Rewards",
       "sections": [
         "sectPrimaryNav",
         "rewards"
@@ -1309,7 +1309,7 @@
         {
           "xPos": 0.08,
           "yPos": -0.22,
-          "actionType": "changeScreen",
+          "actionType": "rewardCheck",
           "actionParameter": "rewardCheck",
           "label": "Reward",
           "neighbors": {
@@ -1321,7 +1321,7 @@
         {
           "xPos": 0.24,
           "yPos": -0.22,
-          "actionType": "changeScreen",
+          "actionType": "rewardCheck",
           "actionParameter": "rewardCheck",
           "label": "Reward",
           "neighbors": {
@@ -1333,7 +1333,7 @@
         {
           "xPos": 0.68,
           "yPos": -0.22,
-          "actionType": "changeScreen",
+          "actionType": "rewardCheck",
           "actionParameter": "rewardCheck",
           "label": "Reward",
           "neighbors": {
@@ -1399,6 +1399,22 @@
             "right": "3",
             "up": "8"
           }
+        }
+      ]
+    },
+    "rewardGet": {
+      "screenTitle": "Getting Reward",
+      "sections": [
+        "rewardGet"
+      ],
+      "positions": [
+        {
+          "xPos": 0.0,
+          "yPos": 0.0,
+          "actionType": "rewardCheck",
+          "actionParameter": "rewardCheck",
+          "label": "Continue",
+          "neighbors": {}
         }
       ]
     },

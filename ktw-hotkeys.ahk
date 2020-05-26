@@ -44,6 +44,31 @@ activate:
       }
       MoveMouse()
       return
+    case "rewardCheck":
+      Send {Click}
+      sleep 2000 ; 1000
+      PixelGetColor, topLeftPixel, 0, 0
+      ; if screen has a primary nav
+      if (topLeftPixel == 0x275676)
+      {
+        MsgBox no more rewards
+        currentScreenID := "rewards"
+      }
+      else ; if screen is a rewards screen
+      {
+        ; if (topLeftPixel == 0x1B1931)
+        MsgBox getting rewards
+        currentScreenID := "rewardGet"
+      }
+      currentScreen := allScreens[currentScreenID]
+      currentSectionIndex := 1
+      currentPositionIndex := 1
+      updatePosition()
+      
+      previousScreenID := ""
+      
+      MoveMouse()
+      return
     default:
       MsgBox Error: Screen type %theType% undefined
       ExitApp
